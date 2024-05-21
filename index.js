@@ -149,10 +149,10 @@ function main() {
             const sourceDefinition = unwrapResult(yield verus.getCurrency(SOURCE_CURRENCY));
             let tree = yield initTree(sourceDefinition, AMOUNT);
             tree = yield addLevel(tree, sourceDefinition, sourceDefinition);
-            let twoHeightTree = yield initTree(sourceDefinition, AMOUNT);
-            twoHeightTree = yield addLevel(twoHeightTree, sourceDefinition);
-            twoHeightTree = yield addLevel(twoHeightTree, sourceDefinition, sourceDefinition);
-            tree = tree.concat(twoHeightTree);
+            // let twoHeightTree = await initTree(sourceDefinition, AMOUNT);
+            // twoHeightTree = await addLevel(twoHeightTree, sourceDefinition);
+            // twoHeightTree = await addLevel(twoHeightTree, sourceDefinition, sourceDefinition);
+            // tree = tree.concat(twoHeightTree);
             tree.sort((a, b) => {
                 const aRes = a[a.length - 1].amount;
                 const bRes = b[b.length - 1].amount;

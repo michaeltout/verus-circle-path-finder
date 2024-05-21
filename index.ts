@@ -201,11 +201,11 @@ async function main() {
     let tree = await initTree(sourceDefinition, AMOUNT);
     tree = await addLevel(tree, sourceDefinition, sourceDefinition);
 
-    let twoHeightTree = await initTree(sourceDefinition, AMOUNT);
-    twoHeightTree = await addLevel(twoHeightTree, sourceDefinition);
-    twoHeightTree = await addLevel(twoHeightTree, sourceDefinition, sourceDefinition);
+    // let twoHeightTree = await initTree(sourceDefinition, AMOUNT);
+    // twoHeightTree = await addLevel(twoHeightTree, sourceDefinition);
+    // twoHeightTree = await addLevel(twoHeightTree, sourceDefinition, sourceDefinition);
 
-    tree = tree.concat(twoHeightTree);
+    // tree = tree.concat(twoHeightTree);
   
     tree.sort((a, b) => {
       const aRes = a[a.length - 1].amount;
